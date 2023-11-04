@@ -80,7 +80,7 @@ Make sure you have read and write permissions on the ```/dev/usb/*``` device tha
 ## Install
 
 ```sh
-npm install bleno@npm:@abandonware/bleno
+npm install bleno@npm:@arturl95/bleno
 ```
 
 ## Usage
