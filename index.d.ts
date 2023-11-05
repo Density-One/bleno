@@ -133,6 +133,9 @@ interface Bleno extends NodeJS.EventEmitter {
 
     updateRssi(callback?: (err: null, rssi: number) => void): void;
 
+    setPhy(callback?: () => void): void;
+
+
     on(event: 'stateChange', cb: (state: State) => void): this;
     on(event: 'platform', cb: (platform: NodeJS.Platform) => void): this;
     on(event: 'addressChange', cb: (address: string) => void): this;
@@ -145,6 +148,8 @@ interface Bleno extends NodeJS.EventEmitter {
     on(event: 'servicesSet', cb: (err?: Error | null) => void): this;
     on(event: 'servicesSetError', cb: (err: Error) => void): this;
     on(event: 'rssiUpdate', cb: (rssi: number) => void): this;
+    on(event: 'phyUpdate', cb: (a: number) => void): this;
+
 }
 
 declare const bleno: Bleno;
